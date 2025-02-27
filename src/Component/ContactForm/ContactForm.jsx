@@ -23,7 +23,7 @@ const notifySuccess = () => toast.success("Form submitted successfully!", {
   transition: Bounce,
 });
 
-const notifyError = () => toast.error("Submission failed! Please try again.", {
+const notifyError = () => toast.error("Error! Submission failed! Please try again.", {
   position: "top-right",
   autoClose: 3000,
   hideProgressBar: false,
