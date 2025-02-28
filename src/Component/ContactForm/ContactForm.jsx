@@ -49,7 +49,7 @@ export const ContactForm = () => (
       validateOnBlur={true}
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         try {
-          // const response = await axios.post("http://localhost:5000/contactForm", values);
+          const response = await axios.post("http://localhost:5000/contactForm", values);
           console.log(response.data);
           notifySuccess();
           resetForm();
