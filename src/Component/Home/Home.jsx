@@ -21,14 +21,14 @@ const Home = () => {
         </p>
 
         {/* Hire Me Button */}
-        <div className="mt-6 flex items-center justify-center md:justify-start"
+        <div className="mt-6 flex items-center justify-center md:justify-start  "
         
         onClick={() => {
           redir('/hireMe');
           setMenuOpen(false); // Close menu after clicking
         }}
       >
-          <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-full shadow-md hover:bg-gray-200 transition" >
+          <button className="flex items-center gap-2 bg-white  text-black px-6 py-2 rounded-full shadow-md hover:bg-yellow-400 transition" >
             <IoBag />
             <span>Hire Me</span>
           </button>

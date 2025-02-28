@@ -7,9 +7,11 @@ const HireMe = () => {
       <h1 className="text-[30px] font-extrabold mb-[15px]">
       Glad to Hear From You
       </h1>
+      
       <p className='text-[18px] mb-[25px]'>Please fill out the form below to discuss any work opportunities with me.</p>
 
       <HireMeForm />
+      
       </section>
   )
 }

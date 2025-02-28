@@ -41,7 +41,7 @@ function Navbar() {
             to="/about"
             className="text-white hover:text-yellow-400 hover:underline hover:decoration-yellow-400 focus:text-yellow-400 active:text-yellow-400 transition duration-300"
           >
-            About
+            About Me
           </Link>
         </li>
         <li>
@@ -56,7 +56,7 @@ function Navbar() {
 
       {/* Contact Button (Only Visible on Desktop) */}
       <button
-        className="hidden md:block bg-white text-black px-4 py-2 rounded-lg"
+        className="hidden md:block bg-white hover:bg-yellow-400 text-black px-4 py-2 rounded-lg"
         onClick={() => {
           redir("/contactMe");
           setMenuOpen(false);
@@ -75,7 +75,7 @@ function Navbar() {
             Home
           </Link>
           <Link to="/about" className="py-2" onClick={() => setMenuOpen(false)}>
-            About
+            About Me
           </Link>
           <Link
             to="/portfolio"
@@ -86,7 +86,7 @@ function Navbar() {
           </Link>
           {/* Contact Button (Only Visible in Mobile Menu) */}
           <button
-            className="bg-white text-black px-4 py-2 mt-4 rounded-lg"
+            className="bg-white  hover:bg-yellow-400 text-black px-4 py-2 mt-4 rounded-lg"
             onClick={() => {
               redir("/contactMe");
               setMenuOpen(false);

@@ -68,7 +68,7 @@ export const ContactForm = () => (
             <Field id="yourName" name="yourName" type="text" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600" />
             <ErrorMessage name="yourName" component="div" className="text-red-400 text-sm" />
           </label>
-
+          
           <label htmlFor="email" className="block">
             Your Email:
             <Field id="email" name="email" type="email" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600" />
@@ -88,6 +88,7 @@ export const ContactForm = () => (
       )}
     </Formik>
     <ToastContainer />
+    
   </div>
 );
 
