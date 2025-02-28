@@ -30,7 +30,7 @@ export const HireMeForm = () => (
       validateOnBlur={true}
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         try {
-          const response = await axios.post("http://localhost:5000/hireMeForm", values);
+          // const response = await axios.post("http://localhost:5000/hireMeForm", values);
           console.log("Response:", response.data);
           notifySuccess(); // Show success toast
           resetForm();
