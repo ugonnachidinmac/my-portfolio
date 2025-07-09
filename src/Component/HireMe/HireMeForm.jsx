@@ -35,7 +35,7 @@ export const HireMeForm = () => (
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         try {
           // ✅ Fixed API endpoint
-          const response = await axios.post("http://localhost:8000/api/hire", values);
+          const response = await axios.post("https://homefinder-1mh9.onrender.com/api/hire", values);
           console.log("Response:", response.data);
           notifySuccess(); // Show success toast
           resetForm();
