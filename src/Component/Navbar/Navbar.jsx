@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="bg-black w-full h-[80px] flex items-center justify-between px-6 md:px-10 fixed z-50">
       {/* Logo */}
       <Image
-        className="rounded w-[50px]"
+        className="rounded w-[50px]" 
         cloudName="dqtyrjpeh"
         publicId="https://res.cloudinary.com/dqtyrjpeh/image/upload/v1739900465/LogoPortFolio_detey1.png"
       />

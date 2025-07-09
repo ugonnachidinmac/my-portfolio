@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { MdOutlineContactPhone } from "react-icons/md";
 
 const SignupSchema = Yup.object().shape({
-  yourName: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
+  name: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
-  yourMessage: Yup.string().min(10, "Message too short!").required("Required"),
+  message: Yup.string().min(10, "Message too short!").required("Required"),
 });
 
 const notifySuccess = () => toast.success("Form submitted successfully!", {
@@ -23,7 +23,7 @@ const notifySuccess = () => toast.success("Form submitted successfully!", {
   transition: Bounce,
 });
 
-const notifyError = () => toast.error("Error! Submission failed! Please try again.", {
+const notifyError = () => toast.error("Error submitting form, or invalide Email...", {
   position: "top-right",
   autoClose: 3000,
   hideProgressBar: false,
@@ -40,16 +40,16 @@ export const ContactForm = () => (
 
     <Formik
       initialValues={{
-        yourName: "",
+        name: "",
         email: "",
-        yourMessage: "",
+        message: "",
       }}
       validationSchema={SignupSchema}
       validateOnChange={true}
       validateOnBlur={true}
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         try {
-          const response = await axios.post("http://localhost:5000/contactForm", values);
+          const response = await axios.post("http://localhost:8000/api/contactMe", values);
           console.log(response.data);
           notifySuccess();
           resetForm();
@@ -63,10 +63,10 @@ export const ContactForm = () => (
     >
       {({ isSubmitting }) => (
         <Form className="flex flex-col gap-4">
-          <label htmlFor="yourName" className="block">
+          <label htmlFor="name" className="block">
             Your Name:
-            <Field id="yourName" name="yourName" type="text" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600" />
-            <ErrorMessage name="yourName" component="div" className="text-red-400 text-sm" />
+            <Field id="name" name="name" type="text" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600" />
+            <ErrorMessage name="name" component="div" className="text-red-400 text-sm" />
           </label>
           
           <label htmlFor="email" className="block">
@@ -75,10 +75,10 @@ export const ContactForm = () => (
             <ErrorMessage name="email" component="div" className="text-red-400 text-sm" />
           </label>
 
-          <label htmlFor="yourMessage" className="block">
+          <label htmlFor="message" className="block">
             Comment/Suggestion:
-            <Field id="yourMessage" name="yourMessage" as="textarea" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600 h-28 resize-none" />
-            <ErrorMessage name="yourMessage" component="div" className="text-red-400 text-sm" />
+            <Field id="message" name="message" as="textarea" className="w-full mt-1 p-2 rounded bg-gray-700 border border-gray-600 h-28 resize-none" />
+            <ErrorMessage name="message" component="div" className="text-red-400 text-sm" />
           </label>
 
           <button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded disabled:bg-gray-500" disabled={isSubmitting}>

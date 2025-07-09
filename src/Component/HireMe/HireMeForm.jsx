@@ -14,7 +14,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 const notifySuccess = () => toast.success("Form submitted successfully!");
-const notifyError = () => toast.error("Submission failed! Please try again.");
+const notifyError = () => toast.error("Error submitting form, or invalide Email...");
 
 export const HireMeForm = () => (
   <div className="w-full max-w-md mx-auto p-6 bg-gray-800 text-white rounded-lg shadow-lg">
