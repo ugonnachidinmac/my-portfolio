@@ -49,7 +49,7 @@ export const ContactForm = () => (
       validateOnBlur={true}
       onSubmit={async (values, { resetForm, setSubmitting }) => {
         try {
-          const response = await axios.post("http://localhost:8000/api/contactMe", values);
+          const response = await axios.post("https://homefinder-1mh9.onrender.com/api/contactMe", values);
           console.log(response.data);
           notifySuccess();
           resetForm();
