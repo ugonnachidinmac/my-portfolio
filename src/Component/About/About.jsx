@@ -7,7 +7,7 @@ const About = () => {
       <section className="bg-[#080707] text-white w-full flex flex-col   px-6 md:px-10 lg:px-20 py-[105px]">
         <div className="text-3xl lg:text-4xl md:text-4xl font-extrabold mb-8 flex items-center justify-center">
           <h1 className='text-center'>
-            About Me <span className="text-yellow-400">(Web Designer)</span>{" "}
+            <span>About Me</span> <br /> <span className="text-yellow-400">(Web Designer)</span>{" "}
           </h1>
         </div>
         <div className="text-[24px] ml-[10px] mb-[15px]">
